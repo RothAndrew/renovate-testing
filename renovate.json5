@@ -53,7 +53,7 @@
       "fileMatch": ["\\.tf$"],
       "datasourceTemplate": "git-tags",
       "matchStrings": [
-        "git::(?<depName>.*?)\\?ref=(tags\\/)?(?<currentValue>.*)"
+        "\\\"git::(?<depName>.*?)\\?ref=(tags\\/)?(?<currentValue>.*)\\\""
       ],
       versioningTemplate: "semver-coerced",
       extractVersionTemplate: "^(tags\/)?(?<version>.*)$"
