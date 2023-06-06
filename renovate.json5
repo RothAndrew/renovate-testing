@@ -64,7 +64,7 @@
         "\\\"git::(?<depName>.*?)\\?ref=(tags\\/)?(?<currentValue>.*)\\\""
       ],
       versioningTemplate: "semver-coerced",
-      extractVersionTemplate: "^(tags\/)?(?<version>.*)$"
+      extractVersionTemplate: "^(tags\/)?v?(?<version>.*)$"
     }
   ],
   packageRules: [
