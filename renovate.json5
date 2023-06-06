@@ -56,16 +56,16 @@
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}",
       "extractVersionTemplate": "^v?(?<version>.*)$"
     },
-    // Custom regex manager for finding terraform module deps that use git
-    {
-      "fileMatch": ["\\.tf$"],
-      "datasourceTemplate": "git-tags",
-      "matchStrings": [
-        "\\\"git::(?<depName>.*?)\\?ref=(tags\\/)?v?(?<currentValue>.*)\\\""
-      ],
-      versioningTemplate: "semver-coerced",
-      extractVersionTemplate: "^v(?<version>.*)$"
-    }
+//    // Custom regex manager for finding terraform module deps that use git
+//    {
+//      "fileMatch": ["\\.tf$"],
+//      "datasourceTemplate": "git-tags",
+//      "matchStrings": [
+//        "\\\"git::(?<depName>.*?)\\?ref=(tags\\/)?v?(?<currentValue>.*)\\\""
+//      ],
+//      versioningTemplate: "semver-coerced",
+//      extractVersionTemplate: "^v(?<version>.*)$"
+//    }
   ],
   packageRules: [
     {
