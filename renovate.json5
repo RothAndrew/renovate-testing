@@ -64,9 +64,11 @@
       matchPackageNames: ["k8s.io/client-go"],
       allowedVersions: "<1.0.0"
     },
-    {
-      matchDepNames: ["github.com/defenseunicorns/terraform-aws-uds-vpc"],
-      versioning: "loose",
-    }
+//    {
+//      matchManagers: ["terraform"],
+//      matchDepTypes: ["module"],
+//      matchDatasources: ["github-tags", "git-tags"],
+//      versioning: "loose"
+//    }
   ]
 }
