@@ -65,7 +65,7 @@
       allowedVersions: "<1.0.0"
     },
     {
-      matchPackagePrefixes: ["defenseunicorns\/terraform-"],
+      matchPackageNames: ["defenseunicorns/terraform-aws-uds-vpc"],
       versioning: "semver-coerced",
       extractVersion: "^(tags\/)?(?<version>.*)$"
     }
