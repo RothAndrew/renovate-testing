@@ -29,6 +29,14 @@
   "pre-commit": {
     enabled: true
   },
+  terraform: {
+    packageRules: [
+      {
+        matchPackageNames: ["defenseunicorns/terraform-aws-uds-vpc"],
+        versioning: "semver-coerced",
+      }
+    ]
+  },
   "regexManagers": [
     // Custom regex manager for the .env file that follows the pattern documented here: https://docs.renovatebot.com/modules/manager/regex/#advanced-capture
     {
@@ -63,11 +71,6 @@
     {
       matchPackageNames: ["k8s.io/client-go"],
       allowedVersions: "<1.0.0"
-    },
-    {
-      matchPackageNames: ["defenseunicorns/terraform-aws-uds-vpc"],
-      versioning: "semver-coerced",
-      extractVersion: "^(tags\/)?(?<version>.*)$"
     }
   ]
 }
