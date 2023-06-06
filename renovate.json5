@@ -30,13 +30,12 @@
     enabled: true
   },
   terraform: {
-    versioning: "semver-coerced"
-    //    packageRules: [
-//      {
-//        matchPackageNames: ["defenseunicorns/terraform-aws-uds-vpc"],
-//        versioningTemplate: "semver-coerced",
-//      }
-//    ]
+    packageRules: [
+      {
+        matchPackageNames: ["defenseunicorns/terraform-aws-uds-vpc"],
+        versioningTemplate: "semver-coerced",
+      }
+    ]
   },
   "regexManagers": [
     // Custom regex manager for the .env file that follows the pattern documented here: https://docs.renovatebot.com/modules/manager/regex/#advanced-capture
