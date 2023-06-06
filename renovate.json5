@@ -66,8 +66,7 @@
     },
     {
       matchDepNames: ["github.com/defenseunicorns/terraform-aws-uds-vpc"],
-//      matchPackageNames: ["defenseunicorns/terraform-aws-uds-vpc"],
-      versioning: "semver-coerced"
+      versioning: "loose",
     }
   ]
 }
