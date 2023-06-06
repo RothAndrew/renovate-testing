@@ -51,8 +51,9 @@
     // Custom regex manager for finding terraform module deps that use git
     {
       "fileMatch": ["\\.tf$"],
+      "datasourceTemplate": "git-tags",
       "matchStrings": [
-        "git::(?<datasource>.*?)\\?ref=(tags\\/)?(?<currentValue>.*)\\s"
+        "git::(?<depName>.*?)\\?ref=(tags\\/)?(?<currentValue>.*)\\s"
       ],
       versioningTemplate: "semver-coerced",
       extractVersionTemplate: "^v?(?<version>.*)$"
