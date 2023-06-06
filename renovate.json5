@@ -33,7 +33,7 @@
     packageRules: [
       {
         matchPackageNames: ["defenseunicorns/terraform-aws-uds-vpc"],
-        versioningTemplate: "semver-coerced",
+        versioning: "semver-coerced",
       }
     ]
   },
