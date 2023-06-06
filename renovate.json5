@@ -65,7 +65,7 @@
       allowedVersions: "<1.0.0"
     },
     {
-      matchPackagePrefixes: ["defenseunicorns/terraform-"],
+      matchPackagePrefixes: ["defenseunicorns\/terraform-"],
       versioning: "semver-coerced",
       extractVersion: "^(tags\/)?(?<version>.*)$"
     }
