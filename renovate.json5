@@ -29,6 +29,9 @@
   "pre-commit": {
     enabled: true
   },
+  terraform: {
+    versioning: "semver-coerced"
+  },
   "regexManagers": [
     // Custom regex manager for the .env file that follows the pattern documented here: https://docs.renovatebot.com/modules/manager/regex/#advanced-capture
     {
@@ -47,17 +50,17 @@
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}",
       "extractVersionTemplate": "^v?(?<version>.*)$"
-    },
-    // Custom regex manager for finding terraform module deps that use git
-    {
-      "fileMatch": ["\\.tf$"],
-      "datasourceTemplate": "git-tags",
-      "matchStrings": [
-        "\\\"git::(?<depName>.*?)\\?ref=(tags\\/)?(?<currentValue>.*)\\\""
-      ],
-      versioningTemplate: "semver-coerced",
-      extractVersionTemplate: "^(tags\/)?(?<version>.*)$"
     }
+    // Custom regex manager for finding terraform module deps that use git
+//    {
+//      "fileMatch": ["\\.tf$"],
+//      "datasourceTemplate": "git-tags",
+//      "matchStrings": [
+//        "\\\"git::(?<depName>.*?)\\?ref=(tags\\/)?(?<currentValue>.*)\\\""
+//      ],
+//      versioningTemplate: "semver-coerced",
+//      extractVersionTemplate: "^(tags\/)?(?<version>.*)$"
+//    }
   ],
   packageRules: [
     {
